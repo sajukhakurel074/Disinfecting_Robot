@@ -1,38 +1,139 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
-	<title>Disinfectant Spraying Robot</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <title>Disinfectant Spraying Robot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
-    <body>
-        <h1>Disinfectant Spraying Robot</h1>
 
-            <p>
-                <video controls src="disinfectant.mp4" width="900"></video>
-            </p>
+<body class="is-preload">
 
-            <section id="one">
-                <header class="major">
-                    <div class="row">
-                        <ul class="actions">
-                        <li><a href="https://github.com/sajukhakurel074/Disinfecting_Robot_PCB" class="button">Robot's Embedded Hardware</a></li>
-                        </ul>
-                        <ul class="actions">
-                        <li><a href="https://github.com/sajukhakurel074/Disinfecting_Robot_Software" class="button">Robot's Embedded Firmware</a></li>
-                        </ul>
-                        
-                    </div>
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
 
-                </header> 
-                
-            </section>
-    
-    </body>
+        <!-- One -->
+        <section
+            class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <h1>Disinfectant Spraying Robot</h1>
+                <p class="major">
+                <ul class="actions">
+                    <li><a href="https://github.com/sajukhakurel074/Disinfecting_Robot_PCB" class="button">Robot's
+                            Embedded Hardware</a></li>
+                </ul>
+                <ul class="actions">
+                    <li><a href="https://github.com/sajukhakurel074/Disinfecting_Robot_Software" class="button">Robot's
+                            Embedded Firmware</a></li>
+
+                    </p>
+
+            </div>
+            <div class="video">
+                <video controls src="disinfectant.mp4" width="800" height="500"></video>
+            </div>
+        </section>
+
+        <section
+            class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <p class="major">
+                    The bot is a purely remote-controlled device. With Arduino as the main processing unit of the robot,
+                    it offers varieties of controls and motion to the robot. Our mobile application facilitates users
+                    with full control over the robot so that the user can effortlessly move the robot and spray
+                    disinfectant with just a touch finger. Also, the wireless connection makes it super easy
+                    to operate too.<br>
+                    The whole system of the robot can be divided into two parts. One is
+                    the base part and the other is the robot’s arm, the upper part. The base part of the robot consists
+                    of 4 dc motors and wheels, which are responsible for the movement of the robot as a whole. This part
+                    is a 24V supply using two 12V lipo batteries in series.<br>
+                    The upper part of the robot is responsible for the movement of the nozzle for spraying. It has 2
+                    degree freedom of movement and operate using two motors, a stepper, and a servo. Each of the motors
+                    is responsible for a degree of movement and operates in a 12V power supply from a lead acid battery.
+                    All the components in the robot can be used simultaneously. <br>
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Two -->
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+            id="first">
+            <div class="content">
+                <p class="major">
+                    The robot uses a simple differential drive for movement and is equipped with four 24V DC motors,
+                    with each motor controlling the rotation of a single wheel. The robot uses the Arduino Mega 2560
+                    microcontroller for controlling the motor drivers and Bluetooth signals.<br>
+
+                    The DC Motors are controlled using an H-bridge motor driver L298N which enables the motors to be
+                    operated both clockwise and counterclockwise. The motor driver is given a PWM input from Arduino
+                    according to which the speed and direction of the motors are controlled.<br>
+
+                    The 2-axis arm for spraying the disinfectant is made from wood and is controlled by a stepper motor,
+                    NEMA 17 for horizontal rotation and a servo motor MG995, for vertical movement. The stepper
+                    motor is controlled by a stepper driver A4988 which allows for precise movement of the arm. We also
+                    attached two proximity sensors to control the movement of the stepper motor.<br>
+
+                    A 12 V DC water pump is used for spraying the disinfectant. The water pump is made controllable by
+                    using
+                    a simple on/off relay switch.<br>
+                </p>
+
+            </div>
+            <div class="image">
+                <img src="346044756_3578225842399252_9008828495495260173_n.png" alt="" />
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <p class="major">
+
+
+                    The robot is also equipped with two proximity sensors which are mounted on the front and the back of
+                    the robot. The proximity sensors are used to detect obstacles in the path of the robot and signal
+                    the controller if any obstacle is detected .<br>
+
+                    The robot also has a Raspberry Pi Model 3B+ which is used primarily for video streaming. The video
+                    is captured through a Raspberry Pi Camera, which the raspberry pi broadcasts through WiFi to the
+                    mobile app.<br>
+
+                    The robot is controlled by a mobile app. The mobile app uses Bluetooth to establish communication
+                    with the robot. For this, the robot comes equipped with the HC-05 Bluetooth module. The mobile app
+                    was created using Flutter and comes with an interface for controlling the robot as well as for
+                    viewing the video that is captured by the robot.<br>
+
+                    The power supply for the robot is divided into two parts. One part is for powering the DC motors of
+                    the robot while the other part powers all the other components. The motors are isolated from the
+                    other components as the motors were found to be very noisy and it affected the operation of other
+                    components of the robot. The isolation is done using optocouplers.<br>
+
+
+                </p>
+
+            </div>
+            <div class="image">
+                <img src="346097737_783629213465367_5181765389436674759_n.png" alt="" />
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
